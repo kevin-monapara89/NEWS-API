@@ -1,0 +1,24 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.NEWSAPI" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+         <item name="colorPrimary">@color/black</item>
+    </style>
+
+    <style name="TextColorStyle">
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+    <style name="DescriptioncolorStyle">
+        <item name="android:textColor">#B8B8B8</item>
+    </style>
+
+    <style name="FragColorStyle">
+        <item name="android:background">#393939</item>
+    </style>
+
+    <style name="NewsColorStyle">
+        <item name="android:background">#202020</item>
+    </style>
+
+</resources>

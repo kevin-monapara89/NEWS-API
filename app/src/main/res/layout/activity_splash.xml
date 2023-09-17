@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/black"
+    tools:context=".Activity.SplashActivity">
+
+    <ImageView
+        android:id="@+id/splashicon"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:src="@drawable/img_2"
+        app:tint="@color/white" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="NEWS API"
+        android:textSize="@dimen/_23sdp"
+        android:layout_margin="@dimen/_10sdp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/white"/>
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:layout_margin="@dimen/_10sdp"
+        android:minHeight="20dp"
+        android:minWidth="150dp"
+        android:indeterminateTint="@color/white"/>
+
+</LinearLayout>
