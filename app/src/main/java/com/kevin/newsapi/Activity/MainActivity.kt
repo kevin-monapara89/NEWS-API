@@ -31,7 +31,6 @@ class MainActivity : AppCompatActivity() {
         ScienceFragment(),
         HealthFragment()
     )
-    var adapter = NewsAdapter()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -39,7 +38,6 @@ class MainActivity : AppCompatActivity() {
 
         binding.viewpager.adapter = FragmentAdapter(supportFragmentManager, fragments, item)
         binding.tabitem.setupWithViewPager(binding.viewpager)
-
 
         if (NETWORK_STATS_SERVICE != null) {
             binding.maincontent.isVisible = true
@@ -56,7 +54,6 @@ class MainActivity : AppCompatActivity() {
         binding.btnsearch.setOnClickListener {
             var query = binding.edtsearch.toString()
             ApiClient.q = query
-
         }
 
         binding.cancle.setOnClickListener {

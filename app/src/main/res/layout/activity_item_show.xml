@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.ItemShowActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/_20sdp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_180sdp"
+        android:scaleType="fitXY"
+        android:src="@drawable/img"/>
+
+        <TextView
+            android:id="@+id/btnback"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:text="➔"
+            android:gravity="center"
+            android:rotation="180"
+            android:layout_margin="@dimen/_10sdp"
+            android:textColor="#EFEEEE"
+            android:textSize="@dimen/_24sdp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txttitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_16sdp"
+        android:text="India issues travel advisory urging citizens to ‘remain vigilant’ in Canada as diplomatic row deepens"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_18sdp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/txtdescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/_16sdp"
+        android:paddingRight="@dimen/_16sdp"
+        android:text="“Recently, threats have particularly targeted Indian diplomats and sections of the Indian community who oppose the anti-India agenda,” an advisory released on Wednesday by the Indian Ministry of External Affairs said. “Given the deteriorating security environment in Canada, Indian students in particular are advised to exercise extreme caution and remain vigilant.”"
+        android:textColor="#121212"
+        android:textSize="@dimen/_13sdp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

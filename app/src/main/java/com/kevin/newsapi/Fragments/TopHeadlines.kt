@@ -1,6 +1,7 @@
 package com.kevin.newsapi.Fragments
 
 import android.content.ContentValues
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -9,10 +10,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.widget.NestedScrollView
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.kevin.newsapi.Activity.ItemShowActivity
 import com.kevin.newsapi.Api.ApiClient
 import com.kevin.newsapi.Api.ApiInterface
 import com.kevin.newsapi.Model.ArticlesItem
 import com.kevin.newsapi.Adapter.NewsAdapter
+import com.kevin.newsapi.ClickItem
 import com.kevin.newsapi.Model.NewsModel
 import com.kevin.newsapi.databinding.FragmentTopheadlinesBinding
 import retrofit2.Call
@@ -23,6 +26,7 @@ class TopHeadlines : Fragment() {
 
     lateinit var binding: FragmentTopheadlinesBinding
     var adapter = NewsAdapter()
+    var newslist = ArrayList<ArticlesItem>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -39,8 +43,6 @@ class TopHeadlines : Fragment() {
         })
 
         NewsCall(ApiClient.page)
-
-
         return binding.root
     }
 
@@ -51,13 +53,19 @@ class TopHeadlines : Fragment() {
             .enqueue(object : Callback<NewsModel> {
                 override fun onResponse(call: Call<NewsModel>, response: Response<NewsModel>) {
                     if (response.isSuccessful) {
+//
+                        var clickNow = object : ClickItem {
+                            override fun onClick(position: Int) {
+                                var intent = Intent(context,ItemShowActivity::class.java).putExtra("pos", position)
+                                startActivity(intent)
+                            }
+                        }
                         var news = response.body()?.articles
-                        adapter.newslist.addAll(news as ArrayList<ArticlesItem>)
+                        newslist.addAll(news as ArrayList<ArticlesItem>)
 
                         adapter.setNews(news)
                         binding.rcvallnews.layoutManager = LinearLayoutManager(context)
                         binding.rcvallnews.adapter = adapter
-                        adapter.notifyDataSetChanged()
                     }
                 }
 
