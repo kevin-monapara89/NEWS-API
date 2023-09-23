@@ -36,6 +36,8 @@ class NewsAdapter() : RecyclerView.Adapter<NewsAdapter.NewsHolder>()  {
             newslist.get(position).apply {
                 txttitle.text = title
                 txtdescriptin.text = description
+                txtpublisher.text = source!!.name
+                txtdate.text = publishedAt
                 Glide.with(context).load(urlToImage).into(imgposter)
 
                 holder.itemView.setOnClickListener {
@@ -44,6 +46,9 @@ class NewsAdapter() : RecyclerView.Adapter<NewsAdapter.NewsHolder>()  {
                     intent.putExtra("img", newslist.get(position).urlToImage)
                     intent.putExtra("title", newslist.get(position).title)
                     intent.putExtra("description", newslist.get(position).description)
+                    intent.putExtra("content", newslist.get(position).content)
+                    intent.putExtra("publisher", newslist.get(position).source!!.name)
+                    intent.putExtra("date", newslist.get(position).publishedAt)
 
                     it.context.startActivity(intent)
                 }
