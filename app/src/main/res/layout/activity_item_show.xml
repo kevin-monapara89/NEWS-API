@@ -75,7 +75,7 @@
         android:layout_height="wrap_content"
         android:padding="@dimen/_16sdp"
         android:text="India issues travel advisory urging citizens to ‘remain vigilant’ in Canada as diplomatic row deepens"
-        android:textColor="@color/black"
+        style="@style/TextColorStyle"
         android:textSize="@dimen/_18sdp"
         android:textStyle="bold"/>
 
@@ -86,7 +86,7 @@
         android:paddingLeft="@dimen/_16sdp"
         android:paddingRight="@dimen/_16sdp"
         android:text="“Recently, threats have particularly targeted Indian diplomats and sections of the Indian community who oppose the anti-India agenda,” an advisory released on Wednesday by the Indian Ministry of External Affairs said. “Given the deteriorating security environment in Canada, Indian students in particular are advised to exercise extreme caution and remain vigilant.”"
-        android:textColor="#121212"
+        style="@style/DescriptioncolorStyle"
         android:textSize="@dimen/_11sdp"/>
 
     <TextView
@@ -97,7 +97,7 @@
         android:paddingLeft="@dimen/_16sdp"
         android:paddingRight="@dimen/_16sdp"
         android:text="“Recently, threats have particularly targeted Indian diplomats and sections of the Indian community who oppose the anti-India agenda,” an advisory released on Wednesday by the Indian Ministry of External Affairs said. “Given the deteriorating security environment in Canada, Indian students in particular are advised to exercise extreme caution and remain vigilant.”"
-        android:textColor="#121212"
+        style="@style/DescriptioncolorStyle"
         android:textSize="@dimen/_13sdp"/>
 
         </LinearLayout>

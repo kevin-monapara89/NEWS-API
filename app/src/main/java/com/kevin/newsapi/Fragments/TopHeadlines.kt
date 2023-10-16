@@ -70,7 +70,7 @@ class TopHeadlines : Fragment() {
                 }
 
                 override fun onFailure(call: Call<NewsModel>, t: Throwable) {
-                    val e = Log.e(ContentValues.TAG, "onFailure: ${t.message}")
+                    Log.e(ContentValues.TAG, "onFailure: ${t.message}")
                 }
             })
     }
